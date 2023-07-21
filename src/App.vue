@@ -9,7 +9,7 @@
       </p>
     </div>
   </div>
-  <CardsComponent />
+  <CardsComponent :cardData="cards" />
 </template>
 
 <script>
@@ -19,12 +19,47 @@ export default {
   components: {
     CardsComponent
   },
-  data () {
-     return {
-      cards : [
-        
+  data() {
+    return {
+      cards: [
+        {
+          id: 1,
+          name: 'Bill Mahoney',
+          role: 'PRODUCT OWNER',
+          imagePath: 'src/assets/photo1.png'
+        },
+        {
+          id: 2,
+          name: 'Saba Cabrera',
+          role: 'ART DIRECTOR',
+          imagePath: 'src/assets/photo2.png'
+        },
+        {
+          id: 3,
+          name: 'Shae Le',
+          role: 'Tech Lead',
+          imagePath: 'src/assets/photo3.png'
+        },
+        {
+          id: 4,
+          name: 'Skylah Lu',
+          role: 'UX Designer',
+          imagePath: 'src/assets/photo4.png'
+        },
+        {
+          id: 5,
+          name: 'Griff Richards',
+          role: 'Developer',
+          imagePath: 'src/assets/photo5.png'
+        },
+        {
+          id: 6,
+          name: 'Stan John',
+          role: 'Developer',
+          imagePath: 'src/assets/photo6.png'
+        }
       ]
-     }
+    }
   }
 }
 </script>
