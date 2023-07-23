@@ -25,7 +25,7 @@ export default {
         {
           id: 1,
           name: 'Bill Mahoney',
-          role: 'PRODUCT OWNER',
+          role: 'PRODUCTOWNER',
           imagePath: 'src/assets/photo1.png'
         },
         {
