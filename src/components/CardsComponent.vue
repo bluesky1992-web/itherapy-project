@@ -1,6 +1,11 @@
 <template>
   <div class="card-grid">
-    <div v-for="card in cardData" :key="card.id" class="card-container">
+    <div
+      v-for="(card, index) in cardData"
+      :key="card.id"
+      class="card-container"
+      :class="{ 'middle-column': isMiddleColumn(index) }"
+    >
       <div class="card">
         <p class="role">{{ card.role }}</p>
         <img :src="card.imagePath" :alt="card.name" />
@@ -14,20 +19,31 @@
 export default {
   name: 'CardsComponent',
   props: ['cardData'],
+  methods: {
+    isMiddleColumn(index) {
+      return index === 1 || index === 4  ;
+    },
+  },
 };
 </script>
 
 <style>
+.middle-column {
+ padding-top: 70px;
+ 
+ 
+}
 .card-grid {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 20px; Adjust the gap between cards as needed */
+
   margin-left: 15%;
-  
 }
 
 .card-container {
   flex: 1 0 calc(30% - 20px); /* Adjust the width of the card container to fit 2 cards per row */
+  width: 200px;
+  
 }
 
 .card {

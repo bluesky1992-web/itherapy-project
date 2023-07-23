@@ -79,6 +79,7 @@ export default {
   margin-top: 15px;
 }
 .right > h3 {
+  margin-top: 12px;
   font-size: 18px;
   font-family: Poppins;
   font-weight: 600;
@@ -88,7 +89,7 @@ p {
   width: 420px;
   text-align: left;
   font-size: 18px;
-  margin-top: -7px;
+  /* margin-top: -7px; */
   font-family: Poppins, sans-serif, serif;
 }
 
